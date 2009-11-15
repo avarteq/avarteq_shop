@@ -1,0 +1,25 @@
+<h1>Listing categories</h1>
+
+<table>
+  <tr>
+		<th>Image</th>
+    <th>Title</th>
+    <th>Description</th>
+    
+  </tr>
+
+<% @categories.each do |category| %>
+  <tr>
+		<td><%= image_tag category.image.url(:thumb) %></td>
+    <td><%=h category.title %></td>
+    <td><%=h category.description %></td>
+    <td><%= link_to 'Show', category %></td>
+    <td><%= link_to 'Edit', edit_category_path(category) %></td>
+    <td><%= link_to 'Destroy', category, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New category', new_category_path %>

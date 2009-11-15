@@ -1,0 +1,29 @@
+<%= render :partial => 'categories', :locals => {:categories => @categories } %>
+<%= render :partial => 'cart' %>
+
+<h2>Articles</h2>
+
+<% @products.each do |product| %>
+<!-- Subtemplate: 2 Spalten mit 25/75 Teilung -->
+<div class="subcolumns">
+  <div class="c25l">
+    <div class="subcl">
+   		<%= image_tag product.image.url(:thumb) %>
+     
+    </div>
+  </div>
+
+  <div class="c75r">
+    <div class="subcr">
+      <strong><%=h product.title %></strong><br/>
+			<%=h product.description %><br/>
+			<%= curr(product.price) %>
+			<p>
+			<%= link_to_remote 'Add to cart', :url => { :action => 'add_to_cart', :product_id => product.id } %>
+			</p>
+    </div>
+  </div>
+
+</div>
+<br/>
+<% end %>

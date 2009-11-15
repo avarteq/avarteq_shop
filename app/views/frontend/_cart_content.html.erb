@@ -1,0 +1,11 @@
+<% cart = session[:cart] %>
+<% unless cart.empty? %>
+	<ul>
+	<% cart.products.each_pair do |product, amount| %>
+		<li><%= amount%> x <%= product.title %></li>
+	<% end %>
+	<ul>
+	Total: <%= curr cart.total %>
+<% else %>
+  <p>Your cart is empty.</p>
+<% end %>

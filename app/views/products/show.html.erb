@@ -1,0 +1,43 @@
+<p>
+  <b>Title:</b>
+  <%=h @product.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @product.description %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%=h @product.price %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%=h @product.category_id %>
+</p>
+
+<p>
+  <b>Image file name:</b>
+  <%=h @product.image_file_name %>
+</p>
+
+<p>
+  <b>Image content type:</b>
+  <%=h @product.image_content_type %>
+</p>
+
+<p>
+  <b>Image file size:</b>
+  <%=h @product.image_file_size %>
+</p>
+
+<p>
+  <b>Image updated at:</b>
+  <%=h @product.image_updated_at %>
+</p>
+
+
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Back', products_path %>
