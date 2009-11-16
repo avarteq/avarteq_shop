@@ -13,6 +13,13 @@ class CartController < FrontendController
     end
   end
 
-  def update_cart
+  def checkout
+    @customer = Customer.new
+  end
+  
+  def checkedout
+    @customer = Customer.new(params[:customer])
+    @order = Order.build_from_cart!(@customer, session[:cart])
+    OrderMailer.deliver_confirmation(@order)
   end
 end

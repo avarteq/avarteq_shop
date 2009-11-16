@@ -6,6 +6,8 @@
 	<% end %>
 	<ul>
 	Total: <%= curr cart.total %>
+	<br/>
+	<%= link_to "Edit", { :controller => :cart, :action => :edit_cart }, { :method => :post } %>
 <% else %>
   <p>Your cart is empty.</p>
 <% end %>

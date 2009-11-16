@@ -9,7 +9,7 @@ class CatalogController < FrontendController
       session[:cart].add(product)
       
       render :update do |page|
-        page.replace_html 'cart_content', :partial => 'cart_content'        
+        page.replace_html 'cart_content', :partial => '/common/cart_content'        
       end
     end
   end

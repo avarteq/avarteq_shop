@@ -7871,3 +7871,1903 @@ Processing CartController#remove_from_cart (for 127.0.0.1 at 2009-11-16 11:25:41
   [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
 Rendered cart/_edit_cart_table (3.0ms)
 Completed in 23ms (View: 7, DB: 2) | 200 OK [http://localhost/cart/remove_from_cart]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-11-16 11:27:05) [GET]
+  [4;36;1mCategory Load (0.5ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY title[0m
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT * FROM `categories` LIMIT 1[0m
+Rendering template within layouts/application
+Rendering catalog/index
+  [4;36;1mCategory Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+Rendered common/_categories (5.4ms)
+Rendered common/_cart_content (0.1ms)
+Rendered common/_cart (3.2ms)
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM `products` WHERE (category_id = 1) [0m
+Completed in 108ms (View: 12, DB: 3) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CartController#edit_cart (for 127.0.0.1 at 2009-11-16 11:27:09) [POST]
+  Parameters: {"authenticity_token"=>"DB/Vr74T0Ka4eQgGjZPPpPnNk8MmLQycLd4BbVXDSsk="}
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT * FROM `categories` ORDER BY title[0m
+Rendering template within layouts/application
+Rendering cart/edit_cart
+  [4;36;1mCategory Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+Rendered common/_categories (5.4ms)
+Rendered cart/_trash (0.6ms)
+Rendered cart/_edit_cart_table (2.0ms)
+Completed in 26ms (View: 16, DB: 2) | 200 OK [http://localhost/cart/edit_cart]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-16 11:27:09) [GET]
+
+ActionController::RoutingError (No route matches "/cart/yaml/core/js/webkit-focusfix.js" with {:method=>:get}):
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FrontendController#index (for 127.0.0.1 at 2009-11-16 11:27:12) [GET]
+  Parameters: {"category_id"=>"2"}
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT * FROM `categories` ORDER BY title[0m
+
+ActionController::UnknownAction (No action responded to index. Actions: ):
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CartController#edit_cart (for 127.0.0.1 at 2009-11-16 11:27:34) [GET]
+  [4;35;1mProduct Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY title[0m
+Rendering template within layouts/application
+Rendering cart/edit_cart
+  [4;35;1mCategory Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+Rendered common/_categories (6.2ms)
+Rendered cart/_trash (0.7ms)
+Rendered cart/_edit_cart_table (2.7ms)
+Completed in 36ms (View: 18, DB: 3) | 200 OK [http://localhost/cart/edit_cart]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-16 11:27:34) [GET]
+
+ActionController::RoutingError (No route matches "/cart/yaml/core/js/webkit-focusfix.js" with {:method=>:get}):
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-16 11:27:34) [GET]
+
+ActionController::RoutingError (No route matches "/cart/yaml/core/js/webkit-focusfix.js" with {:method=>:get}):
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-11-16 11:27:35) [GET]
+  Parameters: {"category_id"=>"2"}
+  [4;35;1mProduct Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY title[0m
+Rendering template within layouts/application
+Rendering catalog/index
+  [4;35;1mCategory Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+Rendered common/_categories (5.1ms)
+Rendered common/_cart_content (2.3ms)
+Rendered common/_cart (5.6ms)
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM `products` WHERE (category_id = '2') [0m
+Completed in 39ms (View: 20, DB: 4) | 200 OK [http://localhost/?category_id=2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CartController#edit_cart (for 127.0.0.1 at 2009-11-16 11:27:40) [POST]
+  Parameters: {"authenticity_token"=>"DB/Vr74T0Ka4eQgGjZPPpPnNk8MmLQycLd4BbVXDSsk="}
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY title[0m
+Rendering template within layouts/application
+Rendering cart/edit_cart
+  [4;35;1mCategory Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+Rendered common/_categories (5.1ms)
+Rendered cart/_trash (0.7ms)
+Rendered cart/_edit_cart_table (0.1ms)
+Completed in 21ms (View: 9, DB: 2) | 200 OK [http://localhost/cart/edit_cart]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-16 11:27:40) [GET]
+
+ActionController::RoutingError (No route matches "/cart/yaml/core/js/webkit-focusfix.js" with {:method=>:get}):
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-11-16 11:27:41) [GET]
+  Parameters: {"category_id"=>"2"}
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY title[0m
+Rendering template within layouts/application
+Rendering catalog/index
+  [4;35;1mCategory Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+Rendered common/_categories (5.8ms)
+Rendered common/_cart_content (0.1ms)
+Rendered common/_cart (3.3ms)
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM `products` WHERE (category_id = '2') [0m
+  [4;35;1mProduct Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 39ms (View: 23, DB: 4) | 200 OK [http://localhost/?category_id=2]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-11-16 11:27:43) [GET]
+  Parameters: {"category_id"=>"3"}
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT * FROM `categories` ORDER BY title[0m
+Rendering template within layouts/application
+Rendering catalog/index
+  [4;36;1mCategory Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+Rendered common/_categories (5.4ms)
+Rendered common/_cart_content (0.1ms)
+Rendered common/_cart (3.2ms)
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM `products` WHERE (category_id = '3') [0m
+  [4;36;1mProduct Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 115ms (View: 22, DB: 4) | 200 OK [http://localhost/?category_id=3]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-11-16 11:27:44) [GET]
+  Parameters: {"category_id"=>"1"}
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY title[0m
+Rendering template within layouts/application
+Rendering catalog/index
+  [4;35;1mCategory Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+Rendered common/_categories (5.2ms)
+Rendered common/_cart_content (0.1ms)
+Rendered common/_cart (3.4ms)
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM `products` WHERE (category_id = '1') [0m
+Completed in 27ms (View: 13, DB: 2) | 200 OK [http://localhost/?category_id=1]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-11-16 11:27:46) [GET]
+  Parameters: {"category_id"=>"3"}
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY title[0m
+Rendering template within layouts/application
+Rendering catalog/index
+  [4;35;1mCategory Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+Rendered common/_categories (5.2ms)
+Rendered common/_cart_content (0.1ms)
+Rendered common/_cart (3.6ms)
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM `products` WHERE (category_id = '3') [0m
+  [4;35;1mProduct Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 39ms (View: 22, DB: 4) | 200 OK [http://localhost/?category_id=3]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CatalogController#add_to_cart (for 127.0.0.1 at 2009-11-16 11:27:48) [POST]
+  Parameters: {"product_id"=>"3", "authenticity_token"=>"DB/Vr74T0Ka4eQgGjZPPpPnNk8MmLQycLd4BbVXDSsk=", "_"=>""}
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT * FROM `categories` ORDER BY title[0m
+  [4;36;1mProduct Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 3) [0m
+
+ActionView::MissingTemplate (Missing template catalog/_cart_content.erb in view path app/views):
+  app/controllers/catalog_controller.rb:12:in `add_to_cart'
+  app/controllers/catalog_controller.rb:11:in `add_to_cart'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CatalogController#add_to_cart (for 127.0.0.1 at 2009-11-16 11:27:49) [POST]
+  Parameters: {"product_id"=>"3", "authenticity_token"=>"DB/Vr74T0Ka4eQgGjZPPpPnNk8MmLQycLd4BbVXDSsk=", "_"=>""}
+  [4;35;1mProduct Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY title[0m
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 3) [0m
+
+ActionView::MissingTemplate (Missing template catalog/_cart_content.erb in view path app/views):
+  app/controllers/catalog_controller.rb:12:in `add_to_cart'
+  app/controllers/catalog_controller.rb:11:in `add_to_cart'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-11-16 11:27:51) [GET]
+  Parameters: {"category_id"=>"3"}
+  [4;35;1mProduct Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY title[0m
+Rendering template within layouts/application
+Rendering catalog/index
+  [4;35;1mCategory Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+Rendered common/_categories (6.0ms)
+Rendered common/_cart_content (2.3ms)
+Rendered common/_cart (5.5ms)
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM `products` WHERE (category_id = '3') [0m
+Completed in 38ms (View: 21, DB: 4) | 200 OK [http://localhost/?category_id=3]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-11-16 11:28:09) [GET]
+  [4;36;1mProduct Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM `categories` ORDER BY title[0m
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM `categories` LIMIT 1[0m
+Rendering template within layouts/application
+Rendering catalog/index
+  [4;35;1mCategory Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+Rendered common/_categories (5.0ms)
+Rendered common/_cart_content (2.3ms)
+Rendered common/_cart (6.0ms)
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM `products` WHERE (category_id = 1) [0m
+Completed in 33ms (View: 15, DB: 4) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-11-16 11:28:11) [GET]
+  Parameters: {"category_id"=>"2"}
+  [4;36;1mProduct Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM `categories` ORDER BY title[0m
+Rendering template within layouts/application
+Rendering catalog/index
+  [4;36;1mCategory Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+Rendered common/_categories (5.2ms)
+Rendered common/_cart_content (2.3ms)
+Rendered common/_cart (5.5ms)
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM `products` WHERE (category_id = '2') [0m
+Completed in 37ms (View: 20, DB: 3) | 200 OK [http://localhost/?category_id=2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CatalogController#add_to_cart (for 127.0.0.1 at 2009-11-16 11:28:16) [POST]
+  Parameters: {"product_id"=>"1", "authenticity_token"=>"ixntTXY5m6V2Q5cmaWYJtrDlQqoBC7H7zJOdUy5ZL7Q="}
+  [4;35;1mProduct Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY title[0m
+  [4;35;1mProduct Load (0.2ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+
+ActionView::MissingTemplate (Missing template catalog/_cart_content.erb in view path app/views):
+  app/controllers/catalog_controller.rb:12:in `add_to_cart'
+  app/controllers/catalog_controller.rb:11:in `add_to_cart'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-11-16 11:28:40) [GET]
+  Parameters: {"category_id"=>"2"}
+  [4;35;1mProduct Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY title[0m
+Rendering template within layouts/application
+Rendering catalog/index
+  [4;35;1mCategory Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+Rendered common/_categories (5.9ms)
+Rendered common/_cart_content (2.3ms)
+Rendered common/_cart (5.6ms)
+  [4;36;1mProduct Load (0.4ms)[0m   [0;1mSELECT * FROM `products` WHERE (category_id = '2') [0m
+Completed in 39ms (View: 20, DB: 4) | 200 OK [http://localhost/?category_id=2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CatalogController#add_to_cart (for 127.0.0.1 at 2009-11-16 11:28:42) [POST]
+  Parameters: {"product_id"=>"1", "authenticity_token"=>"ixntTXY5m6V2Q5cmaWYJtrDlQqoBC7H7zJOdUy5ZL7Q="}
+  [4;36;1mProduct Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM `categories` ORDER BY title[0m
+  [4;36;1mProduct Load (0.2ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+
+ActionView::MissingTemplate (Missing template catalog/_cart_content.erb in view path app/views):
+  app/controllers/catalog_controller.rb:12:in `add_to_cart'
+  app/controllers/catalog_controller.rb:11:in `add_to_cart'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-11-16 11:28:58) [GET]
+  Parameters: {"category_id"=>"2"}
+  [4;36;1mProduct Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT * FROM `categories` ORDER BY title[0m
+Rendering template within layouts/application
+Rendering catalog/index
+  [4;36;1mCategory Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+Rendered common/_categories (5.1ms)
+Rendered common/_cart_content (2.3ms)
+Rendered common/_cart (5.6ms)
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM `products` WHERE (category_id = '2') [0m
+Completed in 38ms (View: 21, DB: 4) | 200 OK [http://localhost/?category_id=2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CatalogController#add_to_cart (for 127.0.0.1 at 2009-11-16 11:29:00) [POST]
+  Parameters: {"product_id"=>"1", "authenticity_token"=>"ixntTXY5m6V2Q5cmaWYJtrDlQqoBC7H7zJOdUy5ZL7Q="}
+  [4;35;1mProduct Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY title[0m
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+Rendered common/_cart_content (2.4ms)
+Completed in 21ms (View: 4, DB: 2) | 200 OK [http://localhost/catalog/add_to_cart?product_id=1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CatalogController#add_to_cart (for 127.0.0.1 at 2009-11-16 11:29:02) [POST]
+  Parameters: {"product_id"=>"1", "authenticity_token"=>"ixntTXY5m6V2Q5cmaWYJtrDlQqoBC7H7zJOdUy5ZL7Q="}
+  [4;35;1mProduct Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY title[0m
+  [4;35;1mProduct Load (0.2ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+Rendered common/_cart_content (2.4ms)
+Completed in 21ms (View: 5, DB: 2) | 200 OK [http://localhost/catalog/add_to_cart?product_id=1]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-11-16 11:29:29) [GET]
+  Parameters: {"category_id"=>"2"}
+  [4;35;1mProduct Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY title[0m
+Rendering template within layouts/application
+Rendering catalog/index
+  [4;35;1mCategory Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+Rendered common/_categories (5.0ms)
+Rendered common/_cart_content (3.1ms)
+Rendered common/_cart (7.0ms)
+  [4;36;1mProduct Load (0.7ms)[0m   [0;1mSELECT * FROM `products` WHERE (category_id = '2') [0m
+Completed in 44ms (View: 26, DB: 4) | 200 OK [http://localhost/?category_id=2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CatalogController#add_to_cart (for 127.0.0.1 at 2009-11-16 11:29:31) [POST]
+  Parameters: {"product_id"=>"1", "authenticity_token"=>"ixntTXY5m6V2Q5cmaWYJtrDlQqoBC7H7zJOdUy5ZL7Q="}
+  [4;36;1mProduct Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM `categories` ORDER BY title[0m
+  [4;36;1mProduct Load (0.2ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+Rendered common/_cart_content (2.4ms)
+Completed in 20ms (View: 4, DB: 2) | 200 OK [http://localhost/catalog/add_to_cart?product_id=1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-11-16 11:29:52) [GET]
+  Parameters: {"category_id"=>"2"}
+  [4;36;1mProduct Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM `categories` ORDER BY title[0m
+Rendering template within layouts/application
+Rendering catalog/index
+  [4;36;1mCategory Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+Rendered common/_categories (5.1ms)
+Rendered common/_cart_content (6.2ms)
+Rendered common/_cart (12.2ms)
+  [4;35;1mProduct Load (0.4ms)[0m   [0mSELECT * FROM `products` WHERE (category_id = '2') [0m
+Completed in 49ms (View: 31, DB: 4) | 200 OK [http://localhost/?category_id=2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CatalogController#add_to_cart (for 127.0.0.1 at 2009-11-16 11:29:54) [POST]
+  Parameters: {"product_id"=>"1", "authenticity_token"=>"ixntTXY5m6V2Q5cmaWYJtrDlQqoBC7H7zJOdUy5ZL7Q="}
+  [4;35;1mProduct Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY title[0m
+  [4;35;1mProduct Load (0.2ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+Rendered common/_cart_content (5.2ms)
+Completed in 24ms (View: 7, DB: 2) | 200 OK [http://localhost/catalog/add_to_cart?product_id=1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CatalogController#add_to_cart (for 127.0.0.1 at 2009-11-16 11:29:55) [POST]
+  Parameters: {"product_id"=>"1", "authenticity_token"=>"ixntTXY5m6V2Q5cmaWYJtrDlQqoBC7H7zJOdUy5ZL7Q="}
+  [4;35;1mProduct Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY title[0m
+  [4;35;1mProduct Load (0.2ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+Rendered common/_cart_content (5.2ms)
+Completed in 23ms (View: 7, DB: 2) | 200 OK [http://localhost/catalog/add_to_cart?product_id=1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CatalogController#add_to_cart (for 127.0.0.1 at 2009-11-16 11:29:55) [POST]
+  Parameters: {"product_id"=>"1", "authenticity_token"=>"ixntTXY5m6V2Q5cmaWYJtrDlQqoBC7H7zJOdUy5ZL7Q="}
+  [4;35;1mProduct Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY title[0m
+  [4;35;1mProduct Load (0.2ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+Rendered common/_cart_content (5.2ms)
+Completed in 24ms (View: 7, DB: 2) | 200 OK [http://localhost/catalog/add_to_cart?product_id=1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CatalogController#add_to_cart (for 127.0.0.1 at 2009-11-16 11:29:55) [POST]
+  Parameters: {"product_id"=>"1", "authenticity_token"=>"ixntTXY5m6V2Q5cmaWYJtrDlQqoBC7H7zJOdUy5ZL7Q="}
+  [4;35;1mProduct Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY title[0m
+  [4;35;1mProduct Load (0.2ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+Rendered common/_cart_content (5.2ms)
+Completed in 24ms (View: 7, DB: 2) | 200 OK [http://localhost/catalog/add_to_cart?product_id=1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CartController#edit_cart (for 127.0.0.1 at 2009-11-16 11:52:27) [POST]
+  Parameters: {"authenticity_token"=>"ixntTXY5m6V2Q5cmaWYJtrDlQqoBC7H7zJOdUy5ZL7Q="}
+  [4;35;1mProduct Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY title[0m
+Rendering template within layouts/application
+Rendering cart/edit_cart
+  [4;35;1mCategory Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+Rendered common/_categories (5.0ms)
+Rendered cart/_trash (0.7ms)
+Rendered cart/_edit_cart_table (2.7ms)
+Completed in 31ms (View: 13, DB: 4) | 200 OK [http://localhost/cart/edit_cart]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-16 11:52:27) [GET]
+
+ActionController::RoutingError (No route matches "/cart/yaml/core/js/webkit-focusfix.js" with {:method=>:get}):
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-16 11:52:27) [GET]
+
+ActionController::RoutingError (No route matches "/cart/yaml/core/js/webkit-focusfix.js" with {:method=>:get}):
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CustomersController#index (for 127.0.0.1 at 2009-11-16 12:02:06) [GET]
+  [4;35;1mCustomer Load (0.9ms)[0m   [0mSELECT * FROM `customers` [0m
+Rendering template within layouts/customers
+Rendering customers/index
+  [4;36;1mProduct Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 113ms (View: 101, DB: 4) | 200 OK [http://localhost/customers]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CustomersController#new (for 127.0.0.1 at 2009-11-16 12:02:08) [GET]
+  [4;36;1mCustomer Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `customers`[0m
+Rendering template within layouts/customers
+Rendering customers/new
+  [4;35;1mProduct Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Rendered customers/_form (9.3ms)
+Completed in 43ms (View: 34, DB: 3) | 200 OK [http://localhost/customers/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CartController#edit_cart (for 127.0.0.1 at 2009-11-16 12:03:22) [POST]
+  Parameters: {"authenticity_token"=>"ixntTXY5m6V2Q5cmaWYJtrDlQqoBC7H7zJOdUy5ZL7Q="}
+  [4;35;1mProduct Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY title[0m
+Rendering template within layouts/application
+Rendering cart/edit_cart
+  [4;35;1mCategory Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+Rendered common/_categories (5.2ms)
+Rendered cart/_trash (0.7ms)
+Rendered cart/_edit_cart_table (3.1ms)
+Completed in 43ms (View: 22, DB: 3) | 200 OK [http://localhost/cart/edit_cart]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-16 12:03:22) [GET]
+
+ActionController::RoutingError (No route matches "/cart/yaml/core/js/webkit-focusfix.js" with {:method=>:get}):
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-16 12:03:22) [GET]
+
+ActionController::RoutingError (No route matches "/cart/yaml/core/js/webkit-focusfix.js" with {:method=>:get}):
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CartController#checkout (for 127.0.0.1 at 2009-11-16 12:03:24) [POST]
+  Parameters: {"authenticity_token"=>"ixntTXY5m6V2Q5cmaWYJtrDlQqoBC7H7zJOdUy5ZL7Q="}
+  [4;35;1mProduct Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY title[0m
+Rendering template within layouts/application
+Rendering cart/checkout
+  [4;35;1mCategory Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+
+ActionView::TemplateError (undefined local variable or method `f' for #<ActionView::Base:0x103c30a38>) on line #2 of app/views/customers/_form.html.erb:
+1: <p>
+2:    <%= f.label :firstname %><br />
+3:    <%= f.text_field :firstname %>
+4:  </p>
+5:  <p>
+
+    app/views/customers/_form.html.erb:2
+    app/views/cart/checkout.html.erb:3
+    /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (148.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CartController#checkout (for 127.0.0.1 at 2009-11-16 12:04:16) [POST]
+  Parameters: {"authenticity_token"=>"ixntTXY5m6V2Q5cmaWYJtrDlQqoBC7H7zJOdUy5ZL7Q="}
+  [4;35;1mProduct Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY title[0m
+Rendering template within layouts/application
+Rendering cart/checkout
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #2 of app/views/cart/checkout.html.erb:
+1: <h2>Checkout</h2>
+2: <% form_for(@customer) do |f| %>
+3:   <%= f.error_messages %>
+4: 
+5: 	<%= render :partial => 'customers/form', :locals => {:f => f} %>
+
+    app/views/cart/checkout.html.erb:2
+    /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (143.1ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CartController#checkout (for 127.0.0.1 at 2009-11-16 12:04:54) [POST]
+  Parameters: {"authenticity_token"=>"ixntTXY5m6V2Q5cmaWYJtrDlQqoBC7H7zJOdUy5ZL7Q="}
+  [4;36;1mProduct Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT * FROM `categories` ORDER BY title[0m
+  [4;36;1mCustomer Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `customers`[0m
+Rendering template within layouts/application
+Rendering cart/checkout
+Rendered customers/_form (5.3ms)
+Completed in 43ms (View: 19, DB: 4) | 200 OK [http://localhost/cart/checkout]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-16 12:04:54) [GET]
+
+ActionController::RoutingError (No route matches "/cart/yaml/core/js/webkit-focusfix.js" with {:method=>:get}):
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-16 12:04:54) [GET]
+
+ActionController::RoutingError (No route matches "/cart/yaml/core/js/webkit-focusfix.js" with {:method=>:get}):
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CartController#checkout (for 127.0.0.1 at 2009-11-16 12:05:17) [POST]
+  Parameters: {"authenticity_token"=>"ixntTXY5m6V2Q5cmaWYJtrDlQqoBC7H7zJOdUy5ZL7Q="}
+  [4;36;1mProduct Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM `categories` ORDER BY title[0m
+  [4;36;1mCustomer Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `customers`[0m
+Rendering template within layouts/application
+Rendering cart/checkout
+Rendered customers/_form (5.3ms)
+Completed in 39ms (View: 19, DB: 3) | 200 OK [http://localhost/cart/checkout]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-16 12:05:17) [GET]
+
+ActionController::RoutingError (No route matches "/cart/yaml/core/js/webkit-focusfix.js" with {:method=>:get}):
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-16 12:05:17) [GET]
+
+ActionController::RoutingError (No route matches "/cart/yaml/core/js/webkit-focusfix.js" with {:method=>:get}):
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CartController#checkout (for 127.0.0.1 at 2009-11-16 12:09:17) [POST]
+  Parameters: {"authenticity_token"=>"ixntTXY5m6V2Q5cmaWYJtrDlQqoBC7H7zJOdUy5ZL7Q="}
+  [4;36;1mProduct Columns (3.4ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT * FROM `categories` ORDER BY title[0m
+  [4;36;1mCustomer Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `customers`[0m
+Rendering template within layouts/application
+Rendering cart/checkout
+Rendered customers/_form (5.3ms)
+Completed in 43ms (View: 20, DB: 5) | 200 OK [http://localhost/cart/checkout]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-16 12:09:17) [GET]
+
+ActionController::RoutingError (No route matches "/cart/yaml/core/js/webkit-focusfix.js" with {:method=>:get}):
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-16 12:09:18) [GET]
+
+ActionController::RoutingError (No route matches "/cart/yaml/core/js/webkit-focusfix.js" with {:method=>:get}):
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (8.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateCategories (20091114165950)
+Migrating to CreateProducts (20091114174812)
+Migrating to CreateCustomers (20091115195238)
+Migrating to CreateOrders (20091116111705)
+  [4;35;1mSQL (325.0ms)[0m   [0mCREATE TABLE `orders` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `customer_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (21.6ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091116111705')[0m
+Migrating to CreateTableOrdersProducts (20091116111936)
+  [4;35;1mSQL (17.9ms)[0m   [0mCREATE TABLE `orders_products` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `order_id` int(11), `amount` int(11), `product_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091116111936')[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (3.2ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mdescribe `categories`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW KEYS FROM `categories`[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mSHOW FIELDS FROM `customers`[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mdescribe `customers`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW KEYS FROM `customers`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW FIELDS FROM `orders`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mdescribe `orders`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW KEYS FROM `orders`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW FIELDS FROM `orders_products`[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mdescribe `orders_products`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `orders_products`[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mdescribe `products`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW KEYS FROM `products`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CartController#edit_cart (for 127.0.0.1 at 2009-11-16 12:26:57) [POST]
+  Parameters: {"authenticity_token"=>"ixntTXY5m6V2Q5cmaWYJtrDlQqoBC7H7zJOdUy5ZL7Q="}
+  [4;36;1mProduct Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT * FROM `categories` ORDER BY title[0m
+Rendering template within layouts/application
+Rendering cart/edit_cart
+  [4;36;1mCategory Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+Rendered common/_categories (5.2ms)
+Rendered cart/_trash (0.7ms)
+Rendered cart/_edit_cart_table (2.8ms)
+Completed in 126ms (View: 13, DB: 4) | 200 OK [http://localhost/cart/edit_cart]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-16 12:26:57) [GET]
+
+ActionController::RoutingError (No route matches "/cart/yaml/core/js/webkit-focusfix.js" with {:method=>:get}):
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-16 12:26:57) [GET]
+
+ActionController::RoutingError (No route matches "/cart/yaml/core/js/webkit-focusfix.js" with {:method=>:get}):
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CartController#checkout (for 127.0.0.1 at 2009-11-16 12:26:58) [POST]
+  Parameters: {"authenticity_token"=>"ixntTXY5m6V2Q5cmaWYJtrDlQqoBC7H7zJOdUy5ZL7Q="}
+  [4;36;1mProduct Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM `categories` ORDER BY title[0m
+  [4;36;1mCustomer Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `customers`[0m
+Rendering template within layouts/application
+Rendering cart/checkout
+Rendered customers/_form (5.4ms)
+Completed in 110ms (View: 89, DB: 3) | 200 OK [http://localhost/cart/checkout]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-16 12:26:58) [GET]
+
+ActionController::RoutingError (No route matches "/cart/yaml/core/js/webkit-focusfix.js" with {:method=>:get}):
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-16 12:26:58) [GET]
+
+ActionController::RoutingError (No route matches "/cart/yaml/core/js/webkit-focusfix.js" with {:method=>:get}):
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-11-16 12:39:30) [GET]
+  Parameters: {"category_id"=>"3"}
+  [4;36;1mProduct Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM `categories` ORDER BY title[0m
+Rendering template within layouts/application
+Rendering catalog/index
+  [4;36;1mCategory Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+Rendered common/_categories (5.8ms)
+Rendered common/_cart_content (5.0ms)
+Rendered common/_cart (5.5ms)
+  [4;35;1mProduct Load (0.8ms)[0m   [0mSELECT * FROM `products` WHERE (category_id = '3') [0m
+Completed in 43ms (View: 20, DB: 5) | 200 OK [http://localhost/?category_id=3]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-11-16 12:39:32) [GET]
+  Parameters: {"category_id"=>"2"}
+  [4;35;1mProduct Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY title[0m
+Rendering template within layouts/application
+Rendering catalog/index
+  [4;35;1mCategory Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+Rendered common/_categories (5.0ms)
+Rendered common/_cart_content (5.1ms)
+Rendered common/_cart (5.5ms)
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM `products` WHERE (category_id = '2') [0m
+Completed in 40ms (View: 21, DB: 4) | 200 OK [http://localhost/?category_id=2]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-11-16 12:39:32) [GET]
+  Parameters: {"category_id"=>"3"}
+  [4;36;1mProduct Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM `categories` ORDER BY title[0m
+Rendering template within layouts/application
+Rendering catalog/index
+  [4;36;1mCategory Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+Rendered common/_categories (5.0ms)
+Rendered common/_cart_content (5.0ms)
+Rendered common/_cart (5.4ms)
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM `products` WHERE (category_id = '3') [0m
+Completed in 38ms (View: 20, DB: 3) | 200 OK [http://localhost/?category_id=3]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CartController#edit_cart (for 127.0.0.1 at 2009-11-16 12:39:35) [POST]
+  Parameters: {"authenticity_token"=>"DB/Vr74T0Ka4eQgGjZPPpPnNk8MmLQycLd4BbVXDSsk="}
+  [4;35;1mProduct Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY title[0m
+Rendering template within layouts/application
+Rendering cart/edit_cart
+  [4;35;1mCategory Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+Rendered common/_categories (5.7ms)
+Rendered cart/_trash (0.7ms)
+Rendered cart/_edit_cart_table (2.6ms)
+Completed in 31ms (View: 13, DB: 3) | 200 OK [http://localhost/cart/edit_cart]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-16 12:39:35) [GET]
+
+ActionController::RoutingError (No route matches "/cart/yaml/core/js/webkit-focusfix.js" with {:method=>:get}):
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CartController#checkout (for 127.0.0.1 at 2009-11-16 12:43:04) [POST]
+  Parameters: {"authenticity_token"=>"ixntTXY5m6V2Q5cmaWYJtrDlQqoBC7H7zJOdUy5ZL7Q="}
+  [4;36;1mProduct Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mCategory Load (0.6ms)[0m   [0mSELECT * FROM `categories` ORDER BY title[0m
+  [4;36;1mCustomer Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `customers`[0m
+Rendering template within layouts/application
+Rendering cart/checkout
+Rendered customers/_form (6.2ms)
+Completed in 42ms (View: 14, DB: 4) | 200 OK [http://localhost/cart/checkout]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-16 12:43:04) [GET]
+
+ActionController::RoutingError (No route matches "/cart/yaml/core/js/webkit-focusfix.js" with {:method=>:get}):
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-16 12:43:05) [GET]
+
+ActionController::RoutingError (No route matches "/cart/yaml/core/js/webkit-focusfix.js" with {:method=>:get}):
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CustomersController#create (for 127.0.0.1 at 2009-11-16 12:43:15) [POST]
+  Parameters: {"commit"=>"Submit order", "authenticity_token"=>"ixntTXY5m6V2Q5cmaWYJtrDlQqoBC7H7zJOdUy5ZL7Q=", "customer"=>{"city"=>"", "zip"=>"", "country"=>"", "street"=>"", "lastname"=>"Last", "phone"=>"", "firstname"=>"James", "email"=>""}}
+  [4;36;1mProduct Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mCustomer Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `customers`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCustomer Create (2.5ms)[0m   [0mINSERT INTO `customers` (`city`, `zip`, `created_at`, `country`, `updated_at`, `lastname`, `street`, `firstname`, `phone`, `email`) VALUES('', '', '2009-11-16 11:43:15', '', '2009-11-16 11:43:15', 'Last', '', 'James', '', '')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/customers/1
+Completed in 27ms (DB: 7) | 302 Found [http://localhost/customers]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CustomersController#show (for 127.0.0.1 at 2009-11-16 12:43:15) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCustomer Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `customers`[0m
+  [4;35;1mCustomer Load (0.8ms)[0m   [0mSELECT * FROM `customers` WHERE (`customers`.`id` = 1) [0m
+Rendering template within layouts/customers
+Rendering customers/show
+  [4;36;1mProduct Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 29ms (View: 19, DB: 4) | 200 OK [http://localhost/customers/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CartController#checkout (for 127.0.0.1 at 2009-11-16 12:44:43) [POST]
+  Parameters: {"authenticity_token"=>"ixntTXY5m6V2Q5cmaWYJtrDlQqoBC7H7zJOdUy5ZL7Q="}
+  [4;36;1mProduct Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mCategory Load (0.5ms)[0m   [0mSELECT * FROM `categories` ORDER BY title[0m
+  [4;36;1mCustomer Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `customers`[0m
+Rendering template within layouts/application
+Rendering cart/checkout
+Rendered customers/_form (5.4ms)
+Completed in 48ms (View: 21, DB: 3) | 200 OK [http://localhost/cart/checkout]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-16 12:44:44) [GET]
+
+ActionController::RoutingError (No route matches "/cart/yaml/core/js/webkit-focusfix.js" with {:method=>:get}):
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CartController#perform_checkout (for 127.0.0.1 at 2009-11-16 12:44:45) [POST]
+  Parameters: {"commit"=>"Submit order", "authenticity_token"=>"ixntTXY5m6V2Q5cmaWYJtrDlQqoBC7H7zJOdUy5ZL7Q=", "customer"=>{"city"=>"", "zip"=>"", "country"=>"", "street"=>"", "lastname"=>"Last", "phone"=>"", "firstname"=>"James", "email"=>""}}
+  [4;35;1mProduct Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY title[0m
+  [4;35;1mCustomer Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `customers`[0m
+  [4;36;1mOrder Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `orders`[0m
+
+NoMethodError (undefined method `customer=' for #<Order:0x103c1adc8>):
+  app/models/order.rb:8:in `build_from_cart!'
+  app/controllers/cart_controller.rb:22:in `perform_checkout'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (124.1ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CartController#perform_checkout (for 127.0.0.1 at 2009-11-16 12:45:09) [POST]
+  Parameters: {"commit"=>"Submit order", "authenticity_token"=>"ixntTXY5m6V2Q5cmaWYJtrDlQqoBC7H7zJOdUy5ZL7Q=", "customer"=>{"city"=>"", "zip"=>"", "country"=>"", "street"=>"", "lastname"=>"Last", "phone"=>"", "firstname"=>"James", "email"=>""}}
+  [4;36;1mProduct Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT * FROM `categories` ORDER BY title[0m
+  [4;36;1mCustomer Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `customers`[0m
+  [4;35;1mOrder Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `orders`[0m
+  [4;36;1mOrderItem Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'demo_shop.order_items' doesn't exist: SHOW FIELDS FROM `order_items`[0m
+
+ActiveRecord::StatementInvalid (Mysql::Error: Table 'demo_shop.order_items' doesn't exist: SHOW FIELDS FROM `order_items`):
+  app/models/order.rb:10:in `new'
+  app/models/order.rb:10:in `build_from_cart!'
+  app/models/order.rb:9:in `each_pair'
+  app/models/order.rb:9:in `build_from_cart!'
+  app/controllers/cart_controller.rb:22:in `perform_checkout'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (56.5ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateCategories (20091114165950)
+Migrating to CreateProducts (20091114174812)
+Migrating to CreateCustomers (20091115195238)
+Migrating to CreateOrders (20091116111705)
+Migrating to CreateOrderItems (20091116113543)
+  [4;35;1mSQL (72.9ms)[0m   [0mCREATE TABLE `order_items` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `order_id` int(11), `amount` int(11), `product_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091116113543')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mdescribe `categories`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `categories`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSHOW FIELDS FROM `customers`[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mdescribe `customers`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `customers`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSHOW FIELDS FROM `order_items`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mdescribe `order_items`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `order_items`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW FIELDS FROM `orders`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mdescribe `orders`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `orders`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW FIELDS FROM `orders_products`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mdescribe `orders_products`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `orders_products`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mdescribe `products`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW KEYS FROM `products`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CartController#perform_checkout (for 127.0.0.1 at 2009-11-16 12:45:22) [POST]
+  Parameters: {"commit"=>"Submit order", "authenticity_token"=>"ixntTXY5m6V2Q5cmaWYJtrDlQqoBC7H7zJOdUy5ZL7Q=", "customer"=>{"city"=>"", "zip"=>"", "country"=>"", "street"=>"", "lastname"=>"Last", "phone"=>"", "firstname"=>"James", "email"=>""}}
+  [4;36;1mProduct Columns (5.4ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT * FROM `categories` ORDER BY title[0m
+  [4;36;1mCustomer Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `customers`[0m
+  [4;35;1mOrder Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `orders`[0m
+  [4;36;1mOrderItem Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `order_items`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCustomer Create (0.2ms)[0m   [0;1mINSERT INTO `customers` (`city`, `zip`, `created_at`, `country`, `updated_at`, `lastname`, `street`, `firstname`, `phone`, `email`) VALUES('', '', '2009-11-16 11:45:22', '', '2009-11-16 11:45:22', 'Last', '', 'James', '', '')[0m
+  [4;35;1mOrder Create (0.3ms)[0m   [0mINSERT INTO `orders` (`created_at`, `updated_at`, `customer_id`) VALUES('2009-11-16 11:45:22', '2009-11-16 11:45:22', 2)[0m
+  [4;36;1mOrderItem Create (0.1ms)[0m   [0;1mINSERT INTO `order_items` (`created_at`, `product_id`, `order_id`, `updated_at`, `amount`) VALUES('2009-11-16 11:45:22', 1, 1, '2009-11-16 11:45:22', 70489)[0m
+  [4;35;1mOrderItem Create (0.1ms)[0m   [0mINSERT INTO `order_items` (`created_at`, `product_id`, `order_id`, `updated_at`, `amount`) VALUES('2009-11-16 11:45:22', 3, 1, '2009-11-16 11:45:22', 70489)[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mCOMMIT[0m
+
+ActionView::MissingTemplate (Missing template cart/perform_checkout.erb in view path app/views):
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CartController#edit_cart (for 127.0.0.1 at 2009-11-16 12:45:56) [POST]
+  Parameters: {"authenticity_token"=>"ixntTXY5m6V2Q5cmaWYJtrDlQqoBC7H7zJOdUy5ZL7Q="}
+  [4;36;1mProduct Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mCategory Load (0.7ms)[0m   [0mSELECT * FROM `categories` ORDER BY title[0m
+Rendering template within layouts/application
+Rendering cart/edit_cart
+  [4;36;1mCategory Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+Rendered common/_categories (5.8ms)
+Rendered cart/_trash (0.7ms)
+Rendered cart/_edit_cart_table (2.7ms)
+Completed in 37ms (View: 13, DB: 4) | 200 OK [http://localhost/cart/edit_cart]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-16 12:45:57) [GET]
+
+ActionController::RoutingError (No route matches "/cart/yaml/core/js/webkit-focusfix.js" with {:method=>:get}):
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CartController#checkout (for 127.0.0.1 at 2009-11-16 12:46:00) [POST]
+  Parameters: {"authenticity_token"=>"ixntTXY5m6V2Q5cmaWYJtrDlQqoBC7H7zJOdUy5ZL7Q="}
+  [4;35;1mProduct Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY title[0m
+  [4;35;1mCustomer Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `customers`[0m
+Rendering template within layouts/application
+Rendering cart/checkout
+Rendered customers/_form (5.3ms)
+Completed in 36ms (View: 14, DB: 4) | 200 OK [http://localhost/cart/checkout]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-16 12:46:00) [GET]
+
+ActionController::RoutingError (No route matches "/cart/yaml/core/js/webkit-focusfix.js" with {:method=>:get}):
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-16 12:46:00) [GET]
+
+ActionController::RoutingError (No route matches "/cart/yaml/core/js/webkit-focusfix.js" with {:method=>:get}):
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CartController#perform_checkout (for 127.0.0.1 at 2009-11-16 12:46:05) [POST]
+  Parameters: {"commit"=>"Submit order", "authenticity_token"=>"ixntTXY5m6V2Q5cmaWYJtrDlQqoBC7H7zJOdUy5ZL7Q=", "customer"=>{"city"=>"", "zip"=>"", "country"=>"", "street"=>"", "lastname"=>"Last", "phone"=>"", "firstname"=>"Alexander", "email"=>""}}
+  [4;35;1mProduct Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mCategory Load (1.5ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY title[0m
+  [4;35;1mCustomer Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `customers`[0m
+  [4;36;1mOrder Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `orders`[0m
+  [4;35;1mOrderItem Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `order_items`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCustomer Create (0.3ms)[0m   [0mINSERT INTO `customers` (`city`, `zip`, `created_at`, `country`, `updated_at`, `lastname`, `street`, `firstname`, `phone`, `email`) VALUES('', '', '2009-11-16 11:46:05', '', '2009-11-16 11:46:05', 'Last', '', 'Alexander', '', '')[0m
+  [4;36;1mOrder Create (0.2ms)[0m   [0;1mINSERT INTO `orders` (`created_at`, `updated_at`, `customer_id`) VALUES('2009-11-16 11:46:05', '2009-11-16 11:46:05', 3)[0m
+  [4;35;1mOrderItem Create (0.2ms)[0m   [0mINSERT INTO `order_items` (`created_at`, `product_id`, `order_id`, `updated_at`, `amount`) VALUES('2009-11-16 11:46:05', 1, 2, '2009-11-16 11:46:05', 70489)[0m
+  [4;36;1mOrderItem Create (0.2ms)[0m   [0;1mINSERT INTO `order_items` (`created_at`, `product_id`, `order_id`, `updated_at`, `amount`) VALUES('2009-11-16 11:46:05', 3, 2, '2009-11-16 11:46:05', 70489)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+
+ActionView::MissingTemplate (Missing template cart/perform_checkout.erb in view path app/views):
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CartController#checkout (for 127.0.0.1 at 2009-11-16 12:49:30) [POST]
+  Parameters: {"authenticity_token"=>"DB/Vr74T0Ka4eQgGjZPPpPnNk8MmLQycLd4BbVXDSsk="}
+  [4;35;1mProduct Columns (165.4ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mCategory Load (0.9ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY title[0m
+  [4;35;1mCustomer Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `customers`[0m
+Rendering template within layouts/application
+Rendering cart/checkout
+Rendered customers/_form (5.6ms)
+Completed in 207ms (View: 18, DB: 168) | 200 OK [http://localhost/cart/checkout]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-16 12:49:30) [GET]
+
+ActionController::RoutingError (No route matches "/cart/yaml/core/js/webkit-focusfix.js" with {:method=>:get}):
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CartController#edit_cart (for 127.0.0.1 at 2009-11-16 12:49:38) [POST]
+  Parameters: {"authenticity_token"=>"DB/Vr74T0Ka4eQgGjZPPpPnNk8MmLQycLd4BbVXDSsk="}
+  [4;36;1mProduct Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT * FROM `categories` ORDER BY title[0m
+Rendering template within layouts/application
+Rendering cart/edit_cart
+  [4;36;1mCategory Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+Rendered common/_categories (5.4ms)
+Rendered cart/_trash (0.7ms)
+Rendered cart/_edit_cart_table (2.5ms)
+Completed in 31ms (View: 13, DB: 4) | 200 OK [http://localhost/cart/edit_cart]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-16 12:49:38) [GET]
+
+ActionController::RoutingError (No route matches "/cart/yaml/core/js/webkit-focusfix.js" with {:method=>:get}):
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CartController#checkout (for 127.0.0.1 at 2009-11-16 12:49:41) [POST]
+  Parameters: {"authenticity_token"=>"DB/Vr74T0Ka4eQgGjZPPpPnNk8MmLQycLd4BbVXDSsk="}
+  [4;35;1mProduct Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY title[0m
+  [4;35;1mCustomer Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `customers`[0m
+Rendering template within layouts/application
+Rendering cart/checkout
+Rendered customers/_form (5.8ms)
+Completed in 36ms (View: 14, DB: 3) | 200 OK [http://localhost/cart/checkout]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-16 12:49:41) [GET]
+
+ActionController::RoutingError (No route matches "/cart/yaml/core/js/webkit-focusfix.js" with {:method=>:get}):
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CartController#perform_checkout (for 127.0.0.1 at 2009-11-16 12:49:51) [POST]
+  Parameters: {"commit"=>"Submit order", "authenticity_token"=>"DB/Vr74T0Ka4eQgGjZPPpPnNk8MmLQycLd4BbVXDSsk=", "customer"=>{"city"=>"", "zip"=>"", "country"=>"", "street"=>"", "lastname"=>"Eisenstange", "phone"=>"", "firstname"=>"Rick", "email"=>""}}
+  [4;36;1mProduct Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM `categories` ORDER BY title[0m
+
+ActionController::UnknownAction (No action responded to perform_checkout. Actions: checkedout, checkout, edit_cart, and remove_from_cart):
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-11-16 12:50:13) [GET]
+  [4;35;1mProduct Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY title[0m
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM `categories` LIMIT 1[0m
+Rendering template within layouts/application
+Rendering catalog/index
+  [4;36;1mCategory Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+Rendered common/_categories (5.3ms)
+Rendered common/_cart_content (76.0ms)
+Rendered common/_cart (76.4ms)
+  [4;35;1mProduct Load (0.4ms)[0m   [0mSELECT * FROM `products` WHERE (category_id = 1) [0m
+Completed in 104ms (View: 85, DB: 4) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CartController#edit_cart (for 127.0.0.1 at 2009-11-16 12:50:15) [POST]
+  Parameters: {"authenticity_token"=>"DB/Vr74T0Ka4eQgGjZPPpPnNk8MmLQycLd4BbVXDSsk="}
+  [4;35;1mProduct Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY title[0m
+Rendering template within layouts/application
+Rendering cart/edit_cart
+  [4;35;1mCategory Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+Rendered common/_categories (4.9ms)
+Rendered cart/_trash (0.7ms)
+Rendered cart/_edit_cart_table (2.7ms)
+Completed in 30ms (View: 13, DB: 3) | 200 OK [http://localhost/cart/edit_cart]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-16 12:50:15) [GET]
+
+ActionController::RoutingError (No route matches "/cart/yaml/core/js/webkit-focusfix.js" with {:method=>:get}):
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CartController#checkout (for 127.0.0.1 at 2009-11-16 12:50:23) [POST]
+  Parameters: {"authenticity_token"=>"DB/Vr74T0Ka4eQgGjZPPpPnNk8MmLQycLd4BbVXDSsk="}
+  [4;36;1mProduct Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM `categories` ORDER BY title[0m
+  [4;36;1mCustomer Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `customers`[0m
+Rendering template within layouts/application
+Rendering cart/checkout
+Rendered customers/_form (5.6ms)
+Completed in 41ms (View: 19, DB: 3) | 200 OK [http://localhost/cart/checkout]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-16 12:50:23) [GET]
+
+ActionController::RoutingError (No route matches "/cart/yaml/core/js/webkit-focusfix.js" with {:method=>:get}):
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CartController#checkedout (for 127.0.0.1 at 2009-11-16 12:50:32) [POST]
+  Parameters: {"commit"=>"Submit order", "authenticity_token"=>"DB/Vr74T0Ka4eQgGjZPPpPnNk8MmLQycLd4BbVXDSsk=", "customer"=>{"city"=>"", "zip"=>"", "country"=>"", "street"=>"", "lastname"=>"Eisenstange", "phone"=>"", "firstname"=>"Rick", "email"=>""}}
+  [4;35;1mProduct Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY title[0m
+  [4;35;1mCustomer Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `customers`[0m
+  [4;36;1mOrder Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `orders`[0m
+  [4;35;1mOrderItem Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `order_items`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCustomer Create (0.2ms)[0m   [0mINSERT INTO `customers` (`city`, `zip`, `created_at`, `country`, `updated_at`, `lastname`, `street`, `firstname`, `phone`, `email`) VALUES('', '', '2009-11-16 11:50:32', '', '2009-11-16 11:50:32', 'Eisenstange', '', 'Rick', '', '')[0m
+  [4;36;1mOrder Create (0.1ms)[0m   [0;1mINSERT INTO `orders` (`created_at`, `updated_at`, `customer_id`) VALUES('2009-11-16 11:50:32', '2009-11-16 11:50:32', 4)[0m
+  [4;35;1mOrderItem Create (0.2ms)[0m   [0mINSERT INTO `order_items` (`created_at`, `product_id`, `order_id`, `updated_at`, `amount`) VALUES('2009-11-16 11:50:32', 3, 3, '2009-11-16 11:50:32', 70489)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering cart/checkedout
+Completed in 53ms (View: 9, DB: 7) | 200 OK [http://localhost/cart/checkedout]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-16 12:50:32) [GET]
+
+ActionController::RoutingError (No route matches "/cart/yaml/core/js/webkit-focusfix.js" with {:method=>:get}):
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-11-16 13:09:30) [GET]
+  [4;35;1mProduct Columns (2.8ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY title[0m
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM `categories` LIMIT 1[0m
+Rendering template within layouts/application
+Rendering catalog/index
+  [4;36;1mCategory Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+Rendered common/_categories (5.1ms)
+Rendered common/_cart_content (5.2ms)
+Rendered common/_cart (5.6ms)
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM `products` WHERE (category_id = 1) [0m
+Completed in 38ms (View: 16, DB: 5) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mOrder Load (0.3ms)[0m   [0mSELECT * FROM `orders` LIMIT 1[0m
+  [4;36;1mOrder Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `orders`[0m
+  [4;35;1mCustomer Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `customers`[0m
+  [4;36;1mCustomer Load (0.3ms)[0m   [0;1mSELECT * FROM `customers` WHERE (`customers`.`id` = 4) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-11-16 13:13:51) [GET]
+  [4;35;1mProduct Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY title[0m
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM `categories` LIMIT 1[0m
+Rendering template within layouts/application
+Rendering catalog/index
+  [4;36;1mCategory Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+Rendered common/_categories (5.0ms)
+Rendered common/_cart_content (5.1ms)
+Rendered common/_cart (5.5ms)
+  [4;35;1mProduct Load (0.4ms)[0m   [0mSELECT * FROM `products` WHERE (category_id = 1) [0m
+Completed in 109ms (View: 16, DB: 5) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CartController#edit_cart (for 127.0.0.1 at 2009-11-16 13:13:54) [POST]
+  Parameters: {"authenticity_token"=>"ixntTXY5m6V2Q5cmaWYJtrDlQqoBC7H7zJOdUy5ZL7Q="}
+  [4;35;1mProduct Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY title[0m
+Rendering template within layouts/application
+Rendering cart/edit_cart
+  [4;35;1mCategory Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+Rendered common/_categories (5.4ms)
+Rendered cart/_trash (0.7ms)
+Rendered cart/_edit_cart_table (2.7ms)
+Completed in 30ms (View: 13, DB: 3) | 200 OK [http://localhost/cart/edit_cart]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-16 13:13:54) [GET]
+
+ActionController::RoutingError (No route matches "/cart/yaml/core/js/webkit-focusfix.js" with {:method=>:get}):
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-16 13:13:54) [GET]
+
+ActionController::RoutingError (No route matches "/cart/yaml/core/js/webkit-focusfix.js" with {:method=>:get}):
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CartController#checkout (for 127.0.0.1 at 2009-11-16 13:13:55) [POST]
+  Parameters: {"authenticity_token"=>"ixntTXY5m6V2Q5cmaWYJtrDlQqoBC7H7zJOdUy5ZL7Q="}
+  [4;35;1mProduct Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY title[0m
+  [4;35;1mCustomer Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `customers`[0m
+Rendering template within layouts/application
+Rendering cart/checkout
+Rendered customers/_form (5.4ms)
+Completed in 37ms (View: 14, DB: 3) | 200 OK [http://localhost/cart/checkout]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-16 13:13:55) [GET]
+
+ActionController::RoutingError (No route matches "/cart/yaml/core/js/webkit-focusfix.js" with {:method=>:get}):
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-16 13:13:55) [GET]
+
+ActionController::RoutingError (No route matches "/cart/yaml/core/js/webkit-focusfix.js" with {:method=>:get}):
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CartController#checkedout (for 127.0.0.1 at 2009-11-16 13:14:02) [POST]
+  Parameters: {"commit"=>"Submit order", "authenticity_token"=>"ixntTXY5m6V2Q5cmaWYJtrDlQqoBC7H7zJOdUy5ZL7Q=", "customer"=>{"city"=>"", "zip"=>"", "country"=>"", "street"=>"", "lastname"=>"Last", "phone"=>"", "firstname"=>"Alexander", "email"=>"fischer@avarteq.de"}}
+  [4;35;1mProduct Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY title[0m
+  [4;35;1mCustomer Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `customers`[0m
+  [4;36;1mOrder Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `orders`[0m
+  [4;35;1mOrderItem Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `order_items`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCustomer Create (0.2ms)[0m   [0mINSERT INTO `customers` (`city`, `zip`, `created_at`, `country`, `updated_at`, `lastname`, `street`, `firstname`, `phone`, `email`) VALUES('', '', '2009-11-16 12:14:02', '', '2009-11-16 12:14:02', 'Last', '', 'Alexander', '', 'fischer@avarteq.de')[0m
+  [4;36;1mOrder Create (1.3ms)[0m   [0;1mINSERT INTO `orders` (`created_at`, `updated_at`, `customer_id`) VALUES('2009-11-16 12:14:02', '2009-11-16 12:14:02', 5)[0m
+  [4;35;1mOrderItem Create (0.2ms)[0m   [0mINSERT INTO `order_items` (`created_at`, `product_id`, `order_id`, `updated_at`, `amount`) VALUES('2009-11-16 12:14:02', 1, 4, '2009-11-16 12:14:02', 70489)[0m
+  [4;36;1mOrderItem Create (0.1ms)[0m   [0;1mINSERT INTO `order_items` (`created_at`, `product_id`, `order_id`, `updated_at`, `amount`) VALUES('2009-11-16 12:14:02', 3, 4, '2009-11-16 12:14:02', 70489)[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCOMMIT[0m
+
+ActionView::TemplateError (undefined local variable or method `customer' for #<ActionView::Base:0x103dc1000>) on line #1 of app/views/order_mailer/confirmation.erb:
+1: Hello <%= customer.firstname %> <%= customer.lastname %>,
+2: 
+3: your order has been received. Here a brief summary:
+4: 
+
+    app/views/order_mailer/confirmation.erb:1
+    app/controllers/cart_controller.rb:23:in `checkedout'
+    /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (59.5ms)
+Rendered rescues/_request_and_response (0.9ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CartController#checkedout (for 127.0.0.1 at 2009-11-16 13:14:39) [POST]
+  Parameters: {"commit"=>"Submit order", "authenticity_token"=>"ixntTXY5m6V2Q5cmaWYJtrDlQqoBC7H7zJOdUy5ZL7Q=", "customer"=>{"city"=>"", "zip"=>"", "country"=>"", "street"=>"", "lastname"=>"Last", "phone"=>"", "firstname"=>"Alexander", "email"=>"fischer@avarteq.de"}}
+  [4;35;1mProduct Columns (3.3ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY title[0m
+  [4;35;1mCustomer Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `customers`[0m
+  [4;36;1mOrder Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `orders`[0m
+  [4;35;1mOrderItem Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `order_items`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCustomer Create (0.3ms)[0m   [0mINSERT INTO `customers` (`city`, `zip`, `created_at`, `country`, `updated_at`, `lastname`, `street`, `firstname`, `phone`, `email`) VALUES('', '', '2009-11-16 12:14:39', '', '2009-11-16 12:14:39', 'Last', '', 'Alexander', '', 'fischer@avarteq.de')[0m
+  [4;36;1mOrder Create (0.1ms)[0m   [0;1mINSERT INTO `orders` (`created_at`, `updated_at`, `customer_id`) VALUES('2009-11-16 12:14:39', '2009-11-16 12:14:39', 6)[0m
+  [4;35;1mOrderItem Create (0.1ms)[0m   [0mINSERT INTO `order_items` (`created_at`, `product_id`, `order_id`, `updated_at`, `amount`) VALUES('2009-11-16 12:14:39', 1, 5, '2009-11-16 12:14:39', 70489)[0m
+  [4;36;1mOrderItem Create (0.1ms)[0m   [0;1mINSERT INTO `order_items` (`created_at`, `product_id`, `order_id`, `updated_at`, `amount`) VALUES('2009-11-16 12:14:39', 3, 5, '2009-11-16 12:14:39', 70489)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+Sent mail to fischer@avarteq.de, demoshop@avarteq.de
+
+Date: Mon, 16 Nov 2009 13:14:39 +0100
+From: demoshop@avarteq.de
+To: fischer@avarteq.de, demoshop@avarteq.de
+Subject: Order confirmation for order #{order.id}
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Hello Alexander Last,
+
+your order has been received. Here a brief summary:
+
+
+	* 70489 x Testauspuff
+
+	* 70489 x Kleiner Köter
+Rendering template within layouts/application
+Rendering cart/checkedout
+Completed in 178ms (View: 4, DB: 9) | 200 OK [http://localhost/cart/checkedout]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-16 13:14:39) [GET]
+
+ActionController::RoutingError (No route matches "/cart/yaml/core/js/webkit-focusfix.js" with {:method=>:get}):
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-16 13:14:39) [GET]
+
+ActionController::RoutingError (No route matches "/cart/yaml/core/js/webkit-focusfix.js" with {:method=>:get}):
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CartController#checkedout (for 127.0.0.1 at 2009-11-16 13:15:53) [POST]
+  Parameters: {"commit"=>"Submit order", "authenticity_token"=>"ixntTXY5m6V2Q5cmaWYJtrDlQqoBC7H7zJOdUy5ZL7Q=", "customer"=>{"city"=>"", "zip"=>"", "country"=>"", "street"=>"", "lastname"=>"Last", "phone"=>"", "firstname"=>"Alexander", "email"=>"fischer@avarteq.de"}}
+  [4;35;1mProduct Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY title[0m
+  [4;35;1mCustomer Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `customers`[0m
+  [4;36;1mOrder Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `orders`[0m
+  [4;35;1mOrderItem Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `order_items`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCustomer Create (0.2ms)[0m   [0mINSERT INTO `customers` (`city`, `zip`, `created_at`, `country`, `updated_at`, `lastname`, `street`, `firstname`, `phone`, `email`) VALUES('', '', '2009-11-16 12:15:53', '', '2009-11-16 12:15:53', 'Last', '', 'Alexander', '', 'fischer@avarteq.de')[0m
+  [4;36;1mOrder Create (0.1ms)[0m   [0;1mINSERT INTO `orders` (`created_at`, `updated_at`, `customer_id`) VALUES('2009-11-16 12:15:53', '2009-11-16 12:15:53', 7)[0m
+  [4;35;1mOrderItem Create (0.2ms)[0m   [0mINSERT INTO `order_items` (`created_at`, `product_id`, `order_id`, `updated_at`, `amount`) VALUES('2009-11-16 12:15:53', 1, 6, '2009-11-16 12:15:53', 70489)[0m
+  [4;36;1mOrderItem Create (0.1ms)[0m   [0;1mINSERT INTO `order_items` (`created_at`, `product_id`, `order_id`, `updated_at`, `amount`) VALUES('2009-11-16 12:15:53', 3, 6, '2009-11-16 12:15:53', 70489)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+Sent mail to fischer@avarteq.de, demoshop@avarteq.de
+
+Date: Mon, 16 Nov 2009 13:15:53 +0100
+From: demoshop@avarteq.de
+To: fischer@avarteq.de, demoshop@avarteq.de
+Subject: Order confirmation for order #{order.id}
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Hello Alexander Last,
+
+your order has been received. Here a brief summary:
+
+
+	* 70489 x Testauspuff
+
+	* 70489 x Kleiner Köter
+Rendering template within layouts/application
+Rendering cart/checkedout
+Completed in 148ms (View: 4, DB: 7) | 200 OK [http://localhost/cart/checkedout]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-16 13:15:53) [GET]
+
+ActionController::RoutingError (No route matches "/cart/yaml/core/js/webkit-focusfix.js" with {:method=>:get}):
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)

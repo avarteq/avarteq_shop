@@ -2,7 +2,7 @@
 <h2>Categories</h2>
 <ul>
 	<% @categories.each do |category| %>
-		<li><%= link_to category.title, :controller => :frontend, :category_id => category.id %></li>
+		<li><%= link_to category.title, :controller => :catalog, :category_id => category.id %></li>
 	<% end %>
 </ul>
 <% end %>
