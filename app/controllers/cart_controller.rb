@@ -21,5 +21,6 @@ class CartController < FrontendController
     @customer = Customer.new(params[:customer])
     @order = Order.build_from_cart!(@customer, session[:cart])
     OrderMailer.deliver_confirmation(@order)
+    session[:cart] = Cart.new
   end
 end
