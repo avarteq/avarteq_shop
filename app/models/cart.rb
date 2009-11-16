@@ -13,7 +13,7 @@ class Cart
   def remove(product)
     if @products[product] then      
       @products[product] -= 1
-      @products[product] = nil if @products[product] == 0      
+      @products.delete(product) if @products[product] == 0      
     end
   end
   

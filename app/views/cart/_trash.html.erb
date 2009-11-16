@@ -1,0 +1,15 @@
+<% content_for :col2 do %>
+<h2>Trash</h2>
+
+<span id="trashcan">
+	<img src="/images/trash.jpg" id="trashicon">
+</span>
+
+
+<%= drop_receiving_element('trashicon',                             	# The id of the receiving element
+  :accept => "cart_item",                                        		 	# The CSS class of the dropped element
+  :with   => "'product_id=' + (element.id.split('_').last())",     		# The query string parameters
+  :url    => { :controller => :cart, :action => :remove_from_cart }   # The action to call
+)%>
+
+<% end %>

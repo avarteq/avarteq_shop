@@ -1,0 +1,32 @@
+<% unless @cart.empty? %>
+<table>
+	<tr>
+		<th>Amount</th>
+		<th>Product</th>
+		<th>Price per Item</th>
+		<th>Sum</th>
+	</tr>
+
+	<% @cart.products.each_pair do |product, amount| %>
+		
+		<tr>	
+			<td>
+				<%= amount %>
+			</td>
+			<td><div id="<%= cart_item_id(product) %>" class="cart_item"><%= product.title %></div>				<%= draggable_element(cart_item_id(product), :revert => true) %></td>
+			<td><%= curr product.price %></td>
+			<td><%= curr amount * product.price %></td>
+		</tr>
+	<% end %>
+
+	<tr>
+		<td>Total</td>
+		<td colspan="3" align="right">
+			<%= curr @cart.total %>
+		</td>
+	</tr>
+</table>
+<% else %>
+  <p>Your cart is empty.</p>
+<% end %>
+
