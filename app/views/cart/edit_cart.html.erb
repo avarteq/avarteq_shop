@@ -1,0 +1,35 @@
+<%= render :partial => '/common/categories', :locals => {:categories => @categories } %>
+
+
+<h2>Edit Cart</h2>
+
+<% unless @cart.empty? %>
+<table>
+	<tr>
+		<th>Amount</th>
+		<th>Product</th>
+		<th>Price per Item</th>
+		<th>Sum</th>
+	</tr>
+
+	<% @cart.products.each_pair do |product, amount| %>
+		
+		<tr>	
+			<td><%= text_field_tag :amount, amount, :size => 2 %></td>
+			<td><%= product.title %></td>
+			<td></td>
+			<td></td>
+		</tr>
+	<% end %>
+
+	<tr>
+		<td>Total</td>
+		<td colspan="3" align="right">
+			<%= curr @cart.total %>
+		</td>
+	</tr>
+</table>
+<% else %>
+  <p>Your cart is empty.</p>
+<% end %>
+
