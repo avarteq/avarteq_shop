@@ -10451,3 +10451,155 @@ Rendered common/_cart_content (5.2ms)
 Rendered common/_cart (5.6ms)
   [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM `products` WHERE (category_id = 1) [0m
 Completed in 35ms (View: 15, DB: 4) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-11-16 13:24:49) [GET]
+  [4;36;1mProduct Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM `categories` ORDER BY title[0m
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM `categories` LIMIT 1[0m
+Rendering template within layouts/application
+Rendering catalog/index
+  [4;35;1mCategory Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+Rendered common/_categories (4.9ms)
+Rendered common/_cart_content (5.0ms)
+Rendered common/_cart (5.4ms)
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM `products` WHERE (category_id = 1) [0m
+Completed in 32ms (View: 14, DB: 3) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-11-16 13:24:51) [GET]
+  Parameters: {"category_id"=>"2"}
+  [4;36;1mProduct Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM `categories` ORDER BY title[0m
+Rendering template within layouts/application
+Rendering catalog/index
+  [4;36;1mCategory Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+Rendered common/_categories (80.3ms)
+Rendered common/_cart_content (5.3ms)
+Rendered common/_cart (5.8ms)
+  [4;35;1mProduct Load (0.4ms)[0m   [0mSELECT * FROM `products` WHERE (category_id = '2') [0m
+Completed in 114ms (View: 96, DB: 4) | 200 OK [http://localhost/?category_id=2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-11-16 13:24:52) [GET]
+  Parameters: {"category_id"=>"3"}
+  [4;35;1mProduct Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY title[0m
+Rendering template within layouts/application
+Rendering catalog/index
+  [4;35;1mCategory Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+Rendered common/_categories (5.8ms)
+Rendered common/_cart_content (5.3ms)
+Rendered common/_cart (5.7ms)
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM `products` WHERE (category_id = '3') [0m
+Completed in 40ms (View: 21, DB: 4) | 200 OK [http://localhost/?category_id=3]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CustomersController#index (for 127.0.0.1 at 2009-11-16 13:24:57) [GET]
+  [4;36;1mCustomer Load (0.4ms)[0m   [0;1mSELECT * FROM `customers` [0m
+Rendering template within layouts/application
+Rendering customers/index
+  [4;35;1mCustomer Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `customers`[0m
+  [4;36;1mProduct Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 68ms (View: 58, DB: 4) | 200 OK [http://localhost/customers]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2009-11-16 13:25:10) [GET]
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT * FROM `categories` [0m
+Rendering template within layouts/application
+Rendering categories/index
+  [4;35;1mCategory Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mProduct Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 137ms (View: 127, DB: 3) | 200 OK [http://localhost/categories]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriesController#new (for 127.0.0.1 at 2009-11-16 13:25:14) [GET]
+  [4;36;1mCategory Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+Rendering template within layouts/application
+Rendering categories/new
+  [4;35;1mProduct Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Rendered categories/_form (3.4ms)
+Completed in 41ms (View: 32, DB: 3) | 200 OK [http://localhost/categories/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-16 13:25:14) [GET]
+
+ActionController::RoutingError (No route matches "/categories/yaml/core/js/webkit-focusfix.js" with {:method=>:get}):
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-16 13:25:14) [GET]
+
+ActionController::RoutingError (No route matches "/categories/yaml/core/js/webkit-focusfix.js" with {:method=>:get}):
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/jfischer/.rvm/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriesController#create (for 127.0.0.1 at 2009-11-16 13:25:52) [POST]
+  Parameters: {"category"=>{"title"=>"MP3 Players", "description"=>"Fancy mp3 players", "image"=>#<File:/var/folders/hi/hijrjnD8Fr8jbSKY1SYB+E+++TI/-Tmp-/RackMultipart20091116-17616-1buecyy-0>}, "commit"=>"Create", "authenticity_token"=>"ixntTXY5m6V2Q5cmaWYJtrDlQqoBC7H7zJOdUy5ZL7Q="}
+  [4;35;1mProduct Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mCategory Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mCategory Create (0.4ms)[0m   [0;1mINSERT INTO `categories` (`image_file_name`, `created_at`, `title`, `image_file_size`, `updated_at`, `image_content_type`, `description`, `image_updated_at`) VALUES('Foto_1.jpg', '2009-11-16 12:25:52', 'MP3 Players', 88899, '2009-11-16 12:25:52', 'image/jpeg', 'Fancy mp3 players', '2009-11-16 12:25:52')[0m
+[paperclip] Saving attachments.
+[paperclip] saving /Users/jfischer/git/demo_shop/public/system/images/4/medium/Foto_1.jpg
+[paperclip] saving /Users/jfischer/git/demo_shop/public/system/images/4/original/Foto_1.jpg
+[paperclip] saving /Users/jfischer/git/demo_shop/public/system/images/4/thumb/Foto_1.jpg
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/categories
+Completed in 352ms (DB: 4) | 302 Found [http://localhost/categories]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2009-11-16 13:25:52) [GET]
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT * FROM `categories` [0m
+Rendering template within layouts/application
+Rendering categories/index
+  [4;36;1mCategory Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mProduct Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 55ms (View: 45, DB: 3) | 200 OK [http://localhost/categories]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-11-16 13:25:58) [GET]
+  [4;35;1mProduct Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mCategory Load (1.7ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY title[0m
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM `categories` LIMIT 1[0m
+Rendering template within layouts/application
+Rendering catalog/index
+  [4;36;1mCategory Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+Rendered common/_categories (5.3ms)
+Rendered common/_cart_content (5.2ms)
+Rendered common/_cart (5.6ms)
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM `products` WHERE (category_id = 1) [0m
+Completed in 132ms (View: 15, DB: 5) | 200 OK [http://localhost/]
