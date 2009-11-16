@@ -32,10 +32,10 @@
 		<div id="nav"  role="navigation">
 			<div class="hlist">
 				<ul>
-					<li class="active"><strong>Home</strong></li>
-					<li><a href="#">Button 3</a></li>
-					<li><a href="#">Button 4</a></li>
-					<li><a href="#">Button 5</a></li>
+					<!--
+					<li class="active"><strong>Home</strong></li> -->
+					<li><%= link_to "Home", :controller => :catalog %>
+					<li><%= link_to "Cart", :controller => :cart %></li>
 				</ul>
 			</div>
 		</div>

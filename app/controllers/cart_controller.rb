@@ -1,4 +1,9 @@
 class CartController < FrontendController
+  
+  def index
+    redirect_to :action => :edit_cart
+  end
+  
   def edit_cart    
      @cart = session[:cart]
   end
