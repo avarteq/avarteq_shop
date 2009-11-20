@@ -1,20 +1,20 @@
 production:
   adapter: mysql
-  database: demo_shop
+  database: avarteq_shop
   username: root
   password: xxx
   host: localhost
 
 development:
   adapter: mysql
-  database: demo_shop
+  database: avarteq_shop
   username: root
   password: xxx
   host: localhost
 
 test:
   adapter: mysql
-  database: demo_shop_test
+  database: avarteq_shop_test
   username: root
   password: xxx
   host: localhost
