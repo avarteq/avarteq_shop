@@ -1,0 +1,13 @@
+<h2>Checkout</h2>
+<% form_for(@customer, :url => { :action => :checkedout } ) do |f| %>
+	
+	<p>Please enter your details.</p>
+
+  <%= f.error_messages %>
+
+	<%= render :partial => 'customers/form', :locals => {:f => f} %>
+	
+	<p>
+    <%= f.submit 'Submit order' %>
+  </p>
+<% end %>

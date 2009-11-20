@@ -1,0 +1,7 @@
+Hello <%= @customer.firstname %> <%= @customer.lastname %>,
+
+your order has been received. Here a brief summary:
+
+<% @order.order_items.each do |order_item| %>
+	* <%= order_item.amount %> x <%= order_item.product.title %>
+<% end %>
