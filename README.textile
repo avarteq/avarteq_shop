@@ -3,9 +3,10 @@ h1. Avarteq Shop
 p>. !http://farm3.static.flickr.com/2545/3859077628_55156d5b3e_t.jpg(Avarteq GmbH)!:http://www.avarteq.de
 
 h2. Motivation
+
 This shop is not intended for production use. It has been created in the context of a live coding session at the WebTech conference 2009 in Karlsruhe to demonstrate the Ruby on Rails framework.
 
-However have fun with the code!
+**However have fun with the code!**
 
 h1. Contact
 
