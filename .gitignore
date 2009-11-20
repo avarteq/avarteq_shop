@@ -1,0 +1,17 @@
+.idea
+.loadpath
+.project
+config/database.yml
+config/sunspot.yml
+*.log
+*.out
+tmp/*
+nbproject/*
+index/*
+public/images/statistics/*
+*.DS_STORE
+*/.DS_STORE
+*/*/.DS_STORE
+gigit
+db/development.sqlite3
+db/schema.rb
