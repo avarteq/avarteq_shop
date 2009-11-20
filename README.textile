@@ -1,0 +1,25 @@
+h1. Avarteq Shop
+
+p>. !http://farm3.static.flickr.com/2545/3859077628_55156d5b3e_t.jpg(Avarteq GmbH)!:http://www.avarteq.de
+
+h2. Motivation
+This shop is not intended for production use. It has been created in the context of a live coding session at the WebTech conference 2009 in Karlsruhe to demonstrate the Ruby on Rails framework.
+
+However have fun with the code!
+
+h1. Contact
+
+* You would like to have production ready shop system? 
+* Want to argue about the Ruby and the meaning of life?
+
+Feel free to contact us:
+
+Avarteq GmbH
+Julian Fischer
+avarteq.shop@avarteq.de
+"www.avarteq.de":http://www.avarteq.de
+
+Also checkout our hosting services:
+"www.railshoster.de":http://www.railshoster.de
+and
+"www.enterprise-rails.de":http://www.enterprise-rails.de
