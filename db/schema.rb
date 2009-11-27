@@ -49,14 +49,6 @@ ActiveRecord::Schema.define(:version => 20091116113543) do
     t.datetime "updated_at"
   end
 
-  create_table "orders_products", :force => true do |t|
-    t.integer  "order_id"
-    t.integer  "amount"
-    t.integer  "product_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "products", :force => true do |t|
     t.string   "title"
     t.text     "description"
